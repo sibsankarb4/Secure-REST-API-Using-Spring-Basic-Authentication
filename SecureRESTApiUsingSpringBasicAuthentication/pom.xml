@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.websystique.springmvc</groupId>
-	<artifactId>SecureRESTApiWithBasicAuthentication</artifactId>
+	<groupId>com.sibsankar.springmvc</groupId>
+	<artifactId>SecureRESTApiUsingSpringBasicAuthentication</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 
-	<name>SecureRESTApiWithBasicAuthentication</name>
+	<name>SecureRESTApiUsingSpringBasicAuthentication</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -91,12 +91,12 @@
 					<version>2.4</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>SecureRESTApiWithBasicAuthentication</warName>
+						<warName>SSecureRESTApiUsingSpringBasicAuthentication</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<finalName>SecureRESTApiWithBasicAuthentication</finalName>
+		<finalName>SecureRESTApiUsingSpringBasicAuthentication</finalName>
 	</build>
 </project>
