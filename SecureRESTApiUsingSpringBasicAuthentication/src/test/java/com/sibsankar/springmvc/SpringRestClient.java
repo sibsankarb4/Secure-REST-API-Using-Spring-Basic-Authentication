@@ -23,7 +23,7 @@ public class SpringRestClient {
      * Add HTTP Authorization header, using Basic-Authentication to send user-credentials.
      */
     private static HttpHeaders getHeaders(){
-    	String plainCredentials="bill:abc123";
+    	String plainCredentials="sibsankar:xyz123";
     	String base64Credentials = new String(Base64.encodeBase64(plainCredentials.getBytes()));
     	
     	HttpHeaders headers = new HttpHeaders();
@@ -71,7 +71,7 @@ public class SpringRestClient {
     private static void createUser() {
         System.out.println("\nTesting create User API----------");
         RestTemplate restTemplate = new RestTemplate();
-        User user = new User(0,"Sarah",51,134);
+        User user = new User(0,"Manoj",51,134);
         HttpEntity<Object> request = new HttpEntity<Object>(user, getHeaders());
         URI uri = restTemplate.postForLocation(REST_SERVICE_URI+"/user/", request, User.class);
         System.out.println("Location : "+uri.toASCIIString());
@@ -83,7 +83,7 @@ public class SpringRestClient {
     private static void updateUser() {
         System.out.println("\nTesting update User API----------");
         RestTemplate restTemplate = new RestTemplate();
-        User user  = new User(1,"Tomy",33, 70000);
+        User user  = new User(1,"Joydeep",33, 70000);
         HttpEntity<Object> request = new HttpEntity<Object>(user, getHeaders());
         ResponseEntity<User> response = restTemplate.exchange(REST_SERVICE_URI+"/user/1", HttpMethod.PUT, request, User.class);
         System.out.println(response.getBody());
